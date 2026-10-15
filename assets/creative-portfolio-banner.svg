@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460" role="img" aria-labelledby="title desc">
+  <title id="title">Creative Portfolio animated banner</title>
+  <desc id="desc">An abstract cosmic banner with moving light, orbit lines, particles, and the words Creative Portfolio.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050816"/>
+      <stop offset="0.5" stop-color="#0b1026"/>
+      <stop offset="1" stop-color="#050816"/>
+    </linearGradient>
+    <linearGradient id="titleGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#67e8f9"/>
+      <stop offset="0.5" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#c4b5fd"/>
+    </linearGradient>
+    <radialGradient id="auroraBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.62"/>
+      <stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="auroraViolet" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.58"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="auroraPink" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ec4899" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ec4899" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#94a3b8" stroke-opacity="0.12" stroke-width="1"/>
+    </pattern>
+    <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="34"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="460" rx="28" fill="url(#background)"/>
+  <rect width="1200" height="460" rx="28" fill="url(#grid)"/>
+
+  <g filter="url(#softBlur)">
+    <circle cx="210" cy="110" r="170" fill="url(#auroraBlue)">
+      <animate attributeName="cx" values="210;330;210" dur="10s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="110;160;110" dur="12s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="980" cy="90" r="190" fill="url(#auroraViolet)">
+      <animate attributeName="cx" values="980;850;980" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="90;140;90" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="790" cy="390" r="160" fill="url(#auroraPink)">
+      <animate attributeName="cx" values="790;700;790" dur="14s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <g transform="translate(600 230)" opacity="0.82">
+    <circle r="172" fill="none" stroke="#67e8f9" stroke-opacity="0.16" stroke-width="1.4" stroke-dasharray="5 13">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="28s" repeatCount="indefinite"/>
+    </circle>
+    <ellipse rx="238" ry="86" fill="none" stroke="#a78bfa" stroke-opacity="0.18" stroke-width="1.4">
+      <animateTransform attributeName="transform" type="rotate" from="-12" to="348" dur="34s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse rx="310" ry="112" fill="none" stroke="#f0abfc" stroke-opacity="0.11" stroke-width="1.2">
+      <animateTransform attributeName="transform" type="rotate" from="18" to="-342" dur="42s" repeatCount="indefinite"/>
+    </ellipse>
+    <circle cx="238" cy="0" r="4" fill="#67e8f9" filter="url(#glow)">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="10s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="-310" cy="0" r="3.5" fill="#c4b5fd" filter="url(#glow)">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="16s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <g font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" text-anchor="middle">
+    <text x="600" y="176" fill="#67e8f9" font-size="14" font-weight="700" letter-spacing="6">PORTFOLIO EXPERIENCE</text>
+    <text x="600" y="244" fill="url(#titleGradient)" font-size="66" font-weight="800" letter-spacing="2">CREATIVE PORTFOLIO</text>
+    <text x="600" y="290" fill="#cbd5e1" font-size="20" font-weight="400">Ideas, motion, and code in one digital space.</text>
+
+    <g transform="translate(600 348)">
+      <rect x="-325" y="-18" width="650" height="36" rx="18" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/>
+      <text x="0" y="6" fill="#e2e8f0" font-size="13" font-weight="600" letter-spacing="3">REACT 19  /  VITE 7  /  FRAMER MOTION  /  TAILWIND CSS  /  i18n</text>
+    </g>
+  </g>
+
+  <g fill="#ffffff">
+    <circle cx="128" cy="338" r="2.4" opacity="0.75">
+      <animate attributeName="opacity" values="0.15;0.9;0.15" dur="3.4s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="338;320;338" dur="5.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1024" cy="132" r="2" opacity="0.72">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="4.1s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="132;112;132" dur="5.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1082" cy="312" r="3" opacity="0.62">
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="3.7s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="312;294;312" dur="4.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="170" cy="86" r="1.8" opacity="0.58">
+      <animate attributeName="opacity" values="0.2;0.9;0.2" dur="4.6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <path d="M100 414 H1100" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
+  <path d="M100 414 H1100" stroke="#67e8f9" stroke-opacity="0.7" stroke-width="2" stroke-dasharray="90 1010">
+    <animate attributeName="stroke-dashoffset" values="0;-1100" dur="7s" repeatCount="indefinite"/>
+  </path>
+</svg>
